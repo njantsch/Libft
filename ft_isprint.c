@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/16 16:56:58 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/16 16:57:00 by njantsch         ###   ########.fr       */
+/*   Created: 2023/03/14 14:40:50 by njantsch          #+#    #+#             */
+/*   Updated: 2023/03/14 14:56:21 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int ft_isdigit(int c)
+int ft_isprint(int c)
 {
-    if (c <= '9' && c >= '0')
-        return (1);
-    else
-        return (0);
+	if (c <= 126 && c >= 32)
+		return (1);
+	else
+		return (0);
+}
+
+#include <ctype.h>
+#include <stdio.h>
+int main(void)
+{
+	int res = isprint(0x7F);
+	printf("Output of the implemented function: %d\n", ft_isprint(0x7F));
+	printf("Output of the original function: %d\n", res);
 }

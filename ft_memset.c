@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 15:51:31 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/14 15:51:43 by njantsch         ###   ########.fr       */
+/*   Created: 2023/03/14 14:58:07 by njantsch          #+#    #+#             */
+/*   Updated: 2023/03/14 16:27:36 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 
-char *ft_strchr(const char *str, int c)
+void	*ft_memset(void *b, int c, size_t len)
 {
-    int i;
+	int i;
+	unsigned char *ptr;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        if (str[i] == c)
-            return ((char *)str + i);
-        i++;
-    }
-    return (0);
+	i = 0;
+	ptr = (unsigned char *) b;
+	while (i < len && ptr[i] != '\0')
+	{
+		ptr[i] = c;
+		i++;
+	}
+	return (ptr);
 }
 
 #include <stdio.h>
 #include <string.h>
 int main(void)
 {
-    char str[] = "Hello, world!";
-    char *ptr = strchr(str, 'o');
-    printf("%s Output of the implemented function \n", ft_strchr(str, 'o'));
-    printf("%s Output of the original function \n", ptr);
+	char str[50] = "This function is bullshit";
+	char *res = memset(str, '.', sizeof(char) * 8);
+	printf("Original output: %s\n", res);
+	printf("Implemented output: %s\n", ft_memset(str, '.', sizeof(char) * 8));
 }

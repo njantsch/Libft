@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 15:51:31 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/14 15:51:43 by njantsch         ###   ########.fr       */
+/*   Created: 2023/03/15 12:00:10 by njantsch          #+#    #+#             */
+/*   Updated: 2023/03/16 11:03:22 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-char *ft_strchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    int i;
+	unsigned int	size_str;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        if (str[i] == c)
-            return ((char *)str + i);
-        i++;
-    }
-    return (0);
+	size_str = 0;
+	while (s[size_str])
+	{
+		size_str++;
+	}
+	while (s[size_str--] != s[0])
+	{
+		if (s[size_str] == c)
+			return ((char *)s + size_str);
+	}
+	return (0);
 }
 
 #include <stdio.h>
 #include <string.h>
 int main(void)
 {
-    char str[] = "Hello, world!";
-    char *ptr = strchr(str, 'o');
-    printf("%s Output of the implemented function \n", ft_strchr(str, 'o'));
-    printf("%s Output of the original function \n", ptr);
+	const char str[] = "Thet answer to eveaything";
+	const char ch = 't';
+	printf("Original output: %s\n", strrchr(str, ch));
+	printf("Implemented output: %s\n", ft_strrchr(str, ch));
 }

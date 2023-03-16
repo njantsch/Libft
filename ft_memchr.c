@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 15:51:31 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/14 15:51:43 by njantsch         ###   ########.fr       */
+/*   Created: 2023/03/15 10:18:47 by njantsch          #+#    #+#             */
+/*   Updated: 2023/03/15 11:12:03 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 
-char *ft_strchr(const char *str, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    int i;
+	int	i;
+	unsigned char *str;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        if (str[i] == c)
-            return ((char *)str + i);
-        i++;
-    }
-    return (0);
+	i = 0;
+	str = (unsigned char *) s;
+	while (str[i] && i < n)
+	{
+		if (str[i] == c)
+			return (str + i);
+		i++;
+	}
+	return (0);
 }
 
 #include <stdio.h>
 #include <string.h>
 int main(void)
 {
-    char str[] = "Hello, world!";
-    char *ptr = strchr(str, 'o');
-    printf("%s Output of the implemented function \n", ft_strchr(str, 'o'));
-    printf("%s Output of the original function \n", ptr);
+	const char str[] = "Born to code";
+	const char ch = 'e';
+	printf("Original output: %s\n", memchr(str, ch, 6));
+	printf("Implemented output: %s\n", ft_memchr(str, ch, 6));
 }

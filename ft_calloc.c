@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 15:51:31 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/14 15:51:43 by njantsch         ###   ########.fr       */
+/*   Created: 2023/03/16 11:35:46 by njantsch          #+#    #+#             */
+/*   Updated: 2023/03/16 15:11:33 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 
-char *ft_strchr(const char *str, int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-    int i;
+	void	*ptr;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        if (str[i] == c)
-            return ((char *)str + i);
-        i++;
-    }
-    return (0);
+	ptr = malloc(count * size);
+	if (ptr == NULL || count == 0 || size == 0)
+		return (NULL);
+	ft_bzero(ptr, count);
+	return (ptr);
 }
 
 #include <stdio.h>
-#include <string.h>
 int main(void)
 {
-    char str[] = "Hello, world!";
-    char *ptr = strchr(str, 'o');
-    printf("%s Output of the implemented function \n", ft_strchr(str, 'o'));
-    printf("%s Output of the original function \n", ptr);
+	int *b = (int*)ft_calloc(5, sizeof(int) * 4);
+	int *a = (int*)calloc(5, sizeof(int) * 4);
+	printf("Original output: %d\n", *a);
+	printf("Implemented output: %d\n", *b);
+
+	free(a);
+	free(b);
 }
