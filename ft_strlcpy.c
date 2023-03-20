@@ -6,10 +6,11 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:57:18 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/16 16:57:20 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/20 12:27:59 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 {

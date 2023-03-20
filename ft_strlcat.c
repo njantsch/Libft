@@ -6,10 +6,11 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:57:11 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/16 16:57:14 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/20 12:27:56 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 unsigned int ft_strlcat(char *dest, const char *src, unsigned int size)
 {

@@ -6,10 +6,11 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:14:01 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/15 11:42:54 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/20 12:27:18 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

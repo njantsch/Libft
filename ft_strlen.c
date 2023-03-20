@@ -6,17 +6,18 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:57:23 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/16 16:57:25 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/20 12:35:47 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-void ft_strlen(char *str)
+size_t ft_strlen(const char *s)
 {
     int i;
 
     i = 0;
-    while (str[i])
+    while (s[i])
     {
         i++;
     }

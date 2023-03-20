@@ -6,10 +6,11 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:56:29 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/16 16:56:32 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/20 12:26:24 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 int ft_atoi(char *str)
 {

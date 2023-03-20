@@ -6,10 +6,11 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 09:42:26 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/15 10:17:28 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/20 12:27:33 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)

@@ -6,13 +6,13 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 15:12:20 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/16 16:56:21 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/20 12:27:49 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {

@@ -6,10 +6,11 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 17:08:26 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/14 18:46:21 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/20 12:27:29 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
