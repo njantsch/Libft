@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 14:58:07 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/20 12:27:36 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:19:42 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	int i;
+	size_t i;
 	unsigned char *ptr;
 
 	i = 0;
@@ -28,12 +28,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (ptr);
 }
 
-#include <stdio.h>
-#include <string.h>
-int main(void)
-{
-	char str[50] = "This function is bullshit";
-	char *res = memset(str, '.', sizeof(char) * 8);
-	printf("Original output: %s\n", res);
-	printf("Implemented output: %s\n", ft_memset(str, '.', sizeof(char) * 8));
-}

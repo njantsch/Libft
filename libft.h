@@ -16,7 +16,7 @@ char			*ft_strchr(const char *str, int c);
 char			*ft_strdup(const char *s1);
 unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
-size_t			ft_strlen(char *str);
+size_t			ft_strlen(char const *s);
 int				ft_strncmp(const char *str1, const char *str2, unsigned int n);
 char			*ft_strnstr(const char *haystack, const char *needle, int n);
 char			*ft_strrchr(const char *s, int c);

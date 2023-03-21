@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 09:42:26 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/20 12:27:33 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:19:37 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int	i;
+	size_t	i;
 	char temp;
 	unsigned char *dest;
 	unsigned char *source;
@@ -33,13 +33,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dest);
 }
 
-#include <string.h>
-#include <stdio.h>
-
-int main(void)
-{
-	char dest[] = "oldstring";
-	const char src[] = "newstringmeme";
-	printf("Original output: %s\n", memmove(dest, src, 9));
-	printf("Implemented output: %s\n", ft_memmove(dest, src, 9));
-}

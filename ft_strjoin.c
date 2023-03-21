@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 11:11:01 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/20 14:29:02 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:13:54 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	res[i] = '\0';
 	return (res);
-}
-
-#include <stdio.h>
-int main(void)
-{
-	char *str1 = "sadasd";
-	char *str2 = "";
-	char *result = ft_strjoin(str1, str2);
-	printf("The ouptut is: %s\n", result);
 }

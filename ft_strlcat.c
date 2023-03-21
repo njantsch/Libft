@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:57:11 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/20 12:27:56 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:20:07 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,3 @@ unsigned int ft_strlcat(char *dest, const char *src, unsigned int size)
     return (size_dest + size_src);
 }
 
-#include <stdio.h>
-int main(void)
-{
-    char dest[] = "Ich bin 21 Jahre alt ";
-    char src[] = "und heiße Nico";
-    printf("%d\n", ft_strlcat(dest, src, 52));
-    printf("%s\n", dest);
-    return (0);
-}

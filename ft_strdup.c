@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 15:12:20 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/20 12:27:49 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:19:57 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,3 @@ char	*ft_strdup(const char *s1)
 	return (dest);
 }
 
-#include <stdio.h>
-int main(void)
-{
-	char *str = "";
-	printf("Original output: %s\n", strdup(str));
-	printf("Implemented output: %s\n", ft_strdup(str));
-}

@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:35:46 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/20 12:26:43 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:18:58 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,4 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	ft_bzero(ptr, count);
 	return (ptr);
-}
-
-#include <stdio.h>
-int main(void)
-{
-	int *b = (int*)ft_calloc(5, sizeof(int) * 4);
-	int *a = (int*)calloc(5, sizeof(int) * 4);
-	printf("Original output: %d\n", *a);
-	printf("Implemented output: %d\n", *b);
-
-	free(a);
-	free(b);
 }

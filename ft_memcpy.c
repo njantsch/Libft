@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 17:08:26 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/20 12:27:29 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:19:32 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int	i;
+	size_t	i;
 	unsigned char *destination;
 	unsigned char *source;
 
@@ -31,12 +31,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (destination);
 }
 
-#include <stdio.h>
-#include <string.h>
-int main(void)
-{
-	const char src[50] = "Hallo ich heisse marvin";
-	char dest[50];
-	printf("Original output: %s\n", memcpy(dest, src, strlen(src) + 1));
-	printf("Implemented output: %s\n", ft_memcpy(dest, src, strlen(src) + 1));
-}

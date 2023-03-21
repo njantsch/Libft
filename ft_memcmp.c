@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:14:01 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/20 12:27:18 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:19:27 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 	const unsigned char *st1;
 	const unsigned char *st2;
 
@@ -39,12 +39,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
-#include <stdio.h>
-#include <string.h>
-int main(void)
-{
-	char str1[15] = "@$d*";
-	char str2[15] = "@$*";
-	printf("Original output: %d\n", memcmp(str1, str2, 1));
-	printf("Implemented output: %d\n", ft_memcmp(str1, str2, 1));
-}

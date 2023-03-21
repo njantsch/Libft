@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:30:19 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/20 12:26:34 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 13:45:41 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int	i;
+	size_t	i;
 	unsigned char *ptr;
 
 	i = 0;

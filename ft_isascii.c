@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 13:51:07 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/20 12:27:04 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:19:07 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,4 @@ int	ft_isascii(int c)
 		return (1);
 	else
 		return (0);
-}
-
-#include <stdio.h>
-#include <ctype.h>
-int main(void)
-{
-	int res = isascii(0x80);
-	printf("Output of the implemented function: %d\n", ft_isascii(0x80));
-	printf("Output of the original function: %d\n", res);
 }

@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:23:52 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/20 12:28:35 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:20:33 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,4 @@ int	ft_tolower(int c)
 	}
 	else
 		return (c);
-}
-
-#include <stdio.h>
-#include <ctype.h>
-int main(void)
-{
-	printf("Original output: %c\n", tolower(('%')));
-	printf("Implemented output: %c\n", ft_tolower('%'));
 }

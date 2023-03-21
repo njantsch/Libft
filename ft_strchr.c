@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:51:31 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/20 12:27:40 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:19:52 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,3 @@ char *ft_strchr(const char *str, int c)
     return (0);
 }
 
-#include <stdio.h>
-#include <string.h>
-int main(void)
-{
-    char str[] = "Hello, world!";
-    char *ptr = strchr(str, 'o');
-    printf("%s Output of the implemented function \n", ft_strchr(str, 'o'));
-    printf("%s Output of the original function \n", ptr);
-}

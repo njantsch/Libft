@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 14:40:50 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/20 12:27:11 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:19:13 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,3 @@ int ft_isprint(int c)
 		return (0);
 }
 
-#include <ctype.h>
-#include <stdio.h>
-int main(void)
-{
-	int res = isprint(0x7F);
-	printf("Output of the implemented function: %d\n", ft_isprint(0x7F));
-	printf("Output of the original function: %d\n", res);
-}
