@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 14:30:21 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/21 14:20:24 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 17:58:37 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	cpy = (char *)malloc(final_len + 1);
 	if (cpy == NULL)
 		return (NULL);
-	while(f_len <= b_len)
+	while (f_len <= b_len)
 	{
 		cpy[i] = s1[f_len];
 		f_len++;

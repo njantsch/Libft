@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 15:12:20 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/21 14:19:57 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 18:15:20 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 
 char	*ft_strdup(const char *s1)
 {
-	size_t len;
+	size_t	len;
+	char	*dest;
 
 	len = ft_strlen(s1) + 1;
-	char	*dest = malloc(len);
+	dest = malloc(len);
 	if (dest == NULL)
 		return (NULL);
 	ft_memcpy(dest, s1, len);
 	return (dest);
 }
-

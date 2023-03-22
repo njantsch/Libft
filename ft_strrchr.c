@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 12:00:10 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/21 14:20:18 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 18:20:29 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-

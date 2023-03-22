@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 14:58:07 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/21 18:13:17 by njantsch         ###   ########.fr       */
+/*   Created: 2023/03/22 16:16:11 by njantsch          #+#    #+#             */
+/*   Updated: 2023/03/22 17:47:11 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_itoa(int n)
 {
-	size_t			i;
-	unsigned char	*ptr;
+	char *str;
 
-	i = 0;
-	ptr = (unsigned char *) b;
-	while (i < len && ptr[i] != '\0')
-	{
-		ptr[i] = c;
-		i++;
-	}
-	return (ptr);
+	if (n < 0)
+
 }

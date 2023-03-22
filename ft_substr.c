@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 17:02:55 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/21 14:20:28 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 18:00:30 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	int		i;
-	char 	*temp;
-	char	*dest = malloc(len);
+	char	*temp;
+	char	*dest;
 
 	i = 0;
+	dest = malloc(len);
 	temp = NULL;
 	if (dest == NULL)
 		return (NULL);

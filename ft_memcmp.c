@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:14:01 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/21 14:19:27 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/21 18:04:39 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-	const unsigned char *st1;
-	const unsigned char *st2;
+	size_t				i;
+	const unsigned char	*st1;
+	const unsigned char	*st2;
 
 	i = 0;
 	st1 = (const unsigned char *) s1;
@@ -38,4 +38,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
