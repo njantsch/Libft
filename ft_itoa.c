@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 16:16:11 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/23 23:09:49 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/23 23:41:24 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,3 @@ char	*ft_itoa(int n)
 	str = positive(n);
 	return (str);
 }
-
