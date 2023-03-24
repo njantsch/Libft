@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:51:31 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/21 18:14:01 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/24 13:35:19 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ char	*ft_strchr(const char *str, int c)
 			return ((char *)str + i);
 		i++;
 	}
+	if (str[i] == c)
+		return ((char *)str + i);
 	return (0);
 }
