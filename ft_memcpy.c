@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 17:08:26 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/24 00:56:52 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/27 14:07:42 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	dest = (unsigned char *) dst;
 	source = (unsigned char *) src;
 	if (dest == 0 && src == 0)
-		return (NULL);
-	else if (n == 0)
-		return (dest);
+		return (0);
 	while (i < n)
 	{
 		dest[i] = source[i];
 		i++;
 	}
-	dest[i] = '\0';
 	return (dest);
 }

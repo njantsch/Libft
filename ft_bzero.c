@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:30:19 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/21 18:05:49 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/27 13:35:00 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_bzero(void *s, size_t n)
 
 	i = 0;
 	ptr = (unsigned char *) s;
-	while (i < n && ptr[i] != '\0')
+	while (i < n)
 	{
 		ptr[i] = '\0';
 		i++;
