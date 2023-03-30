@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 09:42:26 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/27 14:47:47 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/30 12:24:37 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	else
 	{
 		while (len--)
-		{
 			dest[len] = source[len];
-		}
 	}
 	return (dest);
 }

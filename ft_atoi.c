@@ -6,13 +6,13 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:56:29 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/21 18:05:36 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/29 18:50:31 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	res;
 	int	sign;

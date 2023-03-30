@@ -6,12 +6,11 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 16:16:11 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/23 23:41:24 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/29 18:55:26 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	get_len(int num)
 {
