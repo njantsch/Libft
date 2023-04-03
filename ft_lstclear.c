@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 17:08:26 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/30 18:57:31 by njantsch         ###   ########.fr       */
+/*   Created: 2023/04/01 15:08:15 by njantsch          #+#    #+#             */
+/*   Updated: 2023/04/03 15:55:24 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	size_t			i;
-	unsigned char	*dest;
-	unsigned char	*source;
+	t_list	*given_node;
+	t_list	*next_node;
 
-	i = 0;
-	dest = (unsigned char *) dst;
-	source = (unsigned char *) src;
-	if (dest == 0 && src == 0)
-		return (0);
-	while (i < n)
+	given_node = *lst;
+	while (given_node != NULL)
 	{
-		dest[i] = source[i];
-		i++;
+		(*del)(given_node->content);
+		next_node = given_node->next;
+		free (given_node);
+		given_node = next_node;
 	}
-	return (dest);
+	*lst = NULL;
 }

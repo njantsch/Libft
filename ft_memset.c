@@ -6,12 +6,11 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 14:58:07 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/27 13:34:19 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/30 17:04:31 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {

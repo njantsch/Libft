@@ -6,12 +6,11 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 13:05:22 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/30 15:14:36 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/04/03 18:39:58 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 static int	word_count(char const *str, char sep)
 {
@@ -19,10 +18,12 @@ static int	word_count(char const *str, char sep)
 	int	count;
 	int	len;
 
+	if (!str)
+		return (0);
 	i = 0;
 	count = 0;
 	len = ft_strlen(str);
-	while (str && str[i])
+	while (str[i])
 	{
 		if (str[i] != sep)
 		{
@@ -36,40 +37,44 @@ static int	word_count(char const *str, char sep)
 	return (count);
 }
 
-static char	*get_word(char const *str , int start, int finish)
+static void	free_alloc(char **buff, size_t index)
 {
-	char	*word;
-	int		i;
+	size_t	j;
 
-	i = 0;
-	word = ft_calloc(1, finish - start + 1);
-	while (start < finish)
-		word[i++] = str[start++];
-	word[i] = '\0';
-	return (word);
+	j = 0;
+	while (j < index)
+	{
+		free(buff[j]);
+		j++;
+	}
+	free(buff);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**buffer;
 	size_t	index;
-	size_t	x;
-	size_t	y;
+	size_t	i;
+	size_t	j;
 
 	index = 0;
-	x = 0;
-	y = 0;
-	if (!((char **)buffer = malloc((word_count(s, c) + 1) * sizeof(char *))))
+	i = -1;
+	j = 0;
+	buffer = ft_calloc(word_count(s, c) + 1, sizeof(char *));
+	if (!buffer || !s)
 		return (NULL);
-	while (x <= ft_strlen(s))
+	while (++i <= ft_strlen(s) && s[i])
 	{
-		if (s[x] == c || x == ft_strlen(s))
+		if (s[i] == c)
+			index++;
+		if ((s[i] != c && s[i + 1] == c) || (s[i] != c && s[i + 1] == '\0'))
 		{
-			buffer[y++] = get_word(s, index, x);
-			index = x;
+			buffer[j++] = ft_substr(s, index, (i - index) + 1);
+			if (buffer[j - 1] == NULL)
+				return (free_alloc(buffer, j), NULL);
+			index = i + 1;
 		}
-		x++;
 	}
-	buffer[y] = 0;
+	buffer[j] = NULL;
 	return (buffer);
 }

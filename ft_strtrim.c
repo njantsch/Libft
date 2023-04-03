@@ -6,13 +6,11 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 14:30:21 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/24 18:20:05 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/31 15:04:35 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdlib.h>
 
 static int	checkf(char const *str1, char const *chs)
 {
@@ -35,12 +33,15 @@ static int	checkb(char const *string, char const *characters)
 
 	count = 0;
 	back_len = ft_strlen(string);
-	while (string[back_len - 1] != 0)
+	if (back_len != 0)
 	{
-		if (ft_strchr(characters, string[back_len]) == NULL)
-			break ;
-		count++;
-		back_len--;
+		while (string[back_len] >= 0)
+		{
+			if (ft_strchr(characters, string[back_len]) == NULL)
+				break ;
+			count++;
+			back_len--;
+		}
 	}
 	return (count);
 }
@@ -49,24 +50,24 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*cpy;
 	int		final_len;
-	int		f_len;
-	int		b_len;
+	size_t	f_len;
+	size_t	b_len;
 	int		i;
 
 	i = 0;
 	b_len = checkb(s1, set);
 	f_len = checkf(s1, set);
 	final_len = ft_strlen(s1) - (f_len + b_len);
-	if (f_len == (int)ft_strlen(s1))
+	if (f_len == ft_strlen(s1))
 		return (ft_strdup(""));
-	cpy = (char *)malloc(final_len + 2);
-	if (cpy == NULL)
+	cpy = (char *)ft_calloc(final_len + 2, sizeof(char));
+	if (!cpy)
 		return (NULL);
 	while (i <= final_len)
 	{
 		cpy[i] = s1[f_len];
-		i++;
 		f_len++;
+		i++;
 	}
 	cpy[i] = '\0';
 	return (cpy);

@@ -6,7 +6,7 @@
 /*   By: njantsch <njantsch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 16:16:11 by njantsch          #+#    #+#             */
-/*   Updated: 2023/03/29 18:55:26 by njantsch         ###   ########.fr       */
+/*   Updated: 2023/03/31 12:54:28 by njantsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,12 @@ static char	*negative(int neg)
 	while (i >= 0)
 	{
 		if (i == 0)
+		{
 			str1[i] = '-';
-		i--;
+			break ;
+		}
 		temp = sign * (neg % 10);
-		str1[i] = temp + '0';
+		str1[--i] = temp + '0';
 		neg /= 10;
 	}
 	return (str1);
@@ -64,9 +66,8 @@ static char	*positive(int pos)
 		return (NULL);
 	i = get_len(pos) - 1;
 	str2[i] = '\0';
-	while (i > 0)
+	while (i-- > 0)
 	{
-		i--;
 		str2[i] = (pos % 10) + '0';
 		pos /= 10;
 	}
@@ -75,13 +76,7 @@ static char	*positive(int pos)
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-
 	if (n < 0)
-	{
-		str = negative(n);
-		return (str);
-	}
-	str = positive(n);
-	return (str);
+		return (negative(n));
+	return (positive(n));
 }
