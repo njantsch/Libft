@@ -31,4 +31,7 @@ fclean:
 re:	fclean all
 
 bonus : $(BONUSOBJECTS)
+
+$(BONUSOBJECTS) :
+	$(CC) $(CFLAGS) -c $(BONUSSOURCE)
 	ar rcs $(NAME) $(BONUSOBJECTS)
